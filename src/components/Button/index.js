@@ -24,3 +24,6 @@ const Button = styled.button`
 export default Button
 
 // & => referência o button. Puxamos o style do Menu.css tbm
+
+
+// se eu quiser mudar o link, basta trocar .button por (Link)

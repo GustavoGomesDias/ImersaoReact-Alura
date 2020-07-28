@@ -23,3 +23,14 @@ body {
 a {
   color: inherit;
 } 
+
+#root{
+  min-height: calc(100vh - var(--bodyPaddingTop));
+  display: flex;
+  flex-direction: column;
+}
+
+/* min-height: calc(100vh - var(--bodyPaddingTop)); 
+  vh = 1/100 da tela de exibiçãi (viewport)
+  100% de altura - o padding do topo
+*/
