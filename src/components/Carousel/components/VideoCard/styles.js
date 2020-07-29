@@ -24,8 +24,9 @@ export const VideoCardContainer = styled.a`
   &:focus {
     border: 4px solid;
     transition: 1.5s;
-    width: 400px;
-    height: 200px;
+    
+    width: 320px;
+    height: 220px;
   }
   
   &:not(:first-child) {
