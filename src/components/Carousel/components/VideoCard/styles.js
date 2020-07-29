@@ -5,7 +5,7 @@ export const VideoCardContainer = styled.a`
   border-radius: 4px;
   text-decoration: none;
   overflow: hidden;
-  cursor: pointer;
+  cursor: pointer; /*Jeito de falar qual cursor do mouse vai parecer */
   color: white;
   flex: 0 0 298px;
   width: 298px;
@@ -22,7 +22,10 @@ export const VideoCardContainer = styled.a`
   transition: opacity .3s;
   &:hover,
   &:focus {
-    opacity:.5;
+    border: 4px solid;
+    transition: 1.5s;
+    width: 400px;
+    height: 200px;
   }
   
   &:not(:first-child) {

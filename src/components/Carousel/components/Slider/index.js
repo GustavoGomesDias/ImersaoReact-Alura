@@ -47,7 +47,7 @@ const Slider = ({ children }) => (
       speed: 300,
       centerMode: false,
       variableWidth: true, /* Deixa em forma de coluna */
-      adaptiveHeight: true,
+      adaptiveHeight: false,
     }}
     >
       {children}
