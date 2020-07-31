@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable max-len */
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import Button from '../../../components/Button';
@@ -28,6 +29,20 @@ function CadastroCategoria() {
       infosDoEvento.target.value,
     );
   }
+
+  useEffect(() => {
+    const URL = 'http://localhost:8080/categorias';
+    fetch(URL)
+      .then(async (respostaDoServidor) => {
+        const resposta = await respostaDoServidor.json();
+        setCategorias([
+          ...resposta,
+        ]);
+      });
+  }, []);
+  // Vai acontecer sempre que tiver uma modificação nessa parte, que é o compnent de cadastrar categorias
+  // fetch =>Literalmente buscar, pegar coisas
+  // await => "arguado". Aqui, nós estamos falando q esperanmos o compilar a resposta em json
 
   return (
     <PageDefault>
@@ -74,6 +89,13 @@ function CadastroCategoria() {
           Cadastrar
         </Button>
       </form>
+
+      {categorias.length === 0 && (
+        <div>
+          Carregando, missão da turma do bairro...
+        </div>
+      )}
+
       <ul>
         {categorias.map((categoria) => (
           <li key={`${categoria.name}`}>
