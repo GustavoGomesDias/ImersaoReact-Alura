@@ -1,15 +1,13 @@
+/* eslint-disable max-len */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Home from './pages/Home';
-
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
-
+import Home from './pages/Home';
 import CadastroVideo from './pages/cadastro/video';
 import CadastroCategoria from './pages/cadastro/Categoria';
 
-const Pagina404 = () => (<div>404</div>)
+const Pagina404 = () => (<div>404</div>);
 
 ReactDOM.render(
   <BrowserRouter>
@@ -20,13 +18,12 @@ ReactDOM.render(
       <Route component={Pagina404} />
     </Switch>
   </BrowserRouter>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
-
-//<BrowserRouter>
+// <BrowserRouter>
 //    <App /> => chama o App
-//</BrowserRouter>,
+// </BrowserRouter>,
 // Switch é basicamente um if aqui
 // Route é rota, nele a gente coloca qual a rota/endereço que vai acessar aquela categoria
 
@@ -36,7 +33,7 @@ ReactDOM.render(
 
 // Route App tem que ficar por último
 
-//Lembre-se, é SPA, ou seja, uma única url, logo, mudar de url só chama outras funções
+// Lembre-se, é SPA, ou seja, uma única url, logo, mudar de url só chama outras funções
 
 // Se a página não existir, ele manda pra Home, por isso, é preciso usar o 404
 
@@ -44,5 +41,5 @@ ReactDOM.render(
 
 // Sem path, vai ser carregado se der erro, se não existir aquele endereço e etc...
 
-//<Route component={() => (<div>404</div>)} /> => se não existir o endereço, ele entra aqui
-  //() => (<div>404</div>) => arrow function,funciona como uma função, pesquisa rapidinho e seja feliz
+// <Route component={() => (<div>404</div>)} /> => se não existir o endereço, ele entra aqui
+// () => (<div>404</div>) => arrow function,funciona como uma função, pesquisa rapidinho e seja feliz
